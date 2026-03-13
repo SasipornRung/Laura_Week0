@@ -243,12 +243,12 @@
   <div class="kpi-grid">
     <div class="kpi">
       <div class="kpi-label">เข้าร่วมสำเร็จ</div>
-      <div class="kpi-val" style="color:var(--green)">43</div>
-      <div class="kpi-sub">63.2% ของทั้งหมด</div>
+      <div class="kpi-val" style="color:var(--green)">41</div>
+      <div class="kpi-sub">60.3% ของทั้งหมด</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">ยังไม่ติดต่อได้</div>
-      <div class="kpi-val" style="color:var(--amber)">25</div>
+      <div class="kpi-val" style="color:var(--amber)">27</div>
       <div class="kpi-sub">In Progress / Follow-up</div>
     </div>
     <div class="kpi">
@@ -414,7 +414,7 @@
       <div class="card-title">สัดส่วน Segment</div>
       <div class="chart-wrap" style="height:220px"><canvas id="segChart"></canvas></div>
       <div style="margin-top:12px;display:flex;flex-direction:column;gap:5px">
-        <div style="display:flex;justify-content:space-between;font-size:12px"><span><span class="seg seg-std">Standard</span></span><strong>27 คน (63%)</strong></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px"><span><span class="seg seg-std">Standard</span></span><strong>25 คน (61%)</strong></div>
         <div style="display:flex;justify-content:space-between;font-size:12px"><span><span class="seg seg-care">Handle with Care</span></span><strong>9 คน (21%)</strong></div>
         <div style="display:flex;justify-content:space-between;font-size:12px"><span><span class="seg seg-ideal">Ideal Tester</span></span><strong>5 คน (12%)</strong></div>
         <div style="display:flex;justify-content:space-between;font-size:12px"><span><span class="seg seg-watch">Watch List</span></span><strong>2 คน (5%)</strong></div>
@@ -448,6 +448,12 @@
   </div>
 
   <div class="card">
+    <div class="card-title">Protocol Risk Flags</div>
+    <div class="risk-grid">
+      <div class="risk-item">
+        <div class="risk-title">⚠ Confounding: Trylagina</div>
+        <div class="risk-body">98% ยังใช้สูตรเดิม ต้องกำหนด washout period หรือ parallel arm ที่ชัดเจน ไม่เช่นนั้นแยกผลสูตรใหม่ไม่ออก</div>
+      </div>
       <div class="risk-item">
         <div class="risk-title">⚠ Special Products (9 คน)</div>
         <div class="risk-body">ใช้ครีมแพทย์ / ครีมทากระ / ยันฮี ซ้อนกับ routine อาจ interfere กับ active ingredients ของสูตรใหม่</div>
@@ -534,7 +540,7 @@ new Chart(document.getElementById('segChart'), {
   type: 'doughnut',
   data: {
     labels: ['Standard','Handle with Care','Ideal Tester','Watch List'],
-    datasets: [{ data: [27,9,5,2], backgroundColor: ['#D3D1C7','#F0997B','#FAC775','#97C459'], borderWidth: 3, borderColor: '#fff', hoverOffset: 5 }]
+    datasets: [{ data: [25,9,5,2], backgroundColor: ['#D3D1C7','#F0997B','#FAC775','#97C459'], borderWidth: 3, borderColor: '#fff', hoverOffset: 5 }]
   },
   options: { responsive: true, maintainAspectRatio: false, cutout: '62%', plugins: { legend: { display: false } } }
 });
